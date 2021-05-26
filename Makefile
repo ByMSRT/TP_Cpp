@@ -4,20 +4,20 @@ rpg : main.o Character.o Mage.o Barbarian.o Exceptions.o Potion.o
 main.o : main.cpp
 	g++ -c main.cpp -o main.o
 
-Character.o : Character.cpp Character.hpp
-	g++ -c Character.cpp -o Character.o
+Character.o : cpp/Character.cpp hpp/Character.hpp
+	g++ -c cpp/Character.cpp -o Character.o
 
-Mage.o : Mage.cpp Mage.hpp
-	g++ -c Mage.cpp -o Mage.o
+Mage.o : cpp/Mage.cpp hpp/Mage.hpp
+	g++ -c cpp/Mage.cpp -o Mage.o
 
-Barbarian.o : Barbarian.cpp Barbarian.hpp
-	g++ -c Barbarian.cpp -o Barbarian.o
+Barbarian.o : cpp/Barbarian.cpp hpp/Barbarian.hpp
+	g++ -c cpp/Barbarian.cpp -o Barbarian.o
 
-Exceptions.o : Exceptions.cpp Exceptions.hpp
-	g++ -c Exceptions.cpp -o Exceptions.o
+Exceptions.o : cpp/Exceptions.cpp hpp/Exceptions.hpp
+	g++ -c cpp/Exceptions.cpp -o Exceptions.o
 
-Potion.o : Potion.cpp Potion.hpp
-	g++ -c Potion.cpp -o Potion.o
+Potion.o : cpp/Potion.cpp hpp/Potion.hpp
+	g++ -c cpp/Potion.cpp -o Potion.o
 
 clean : 
 	rm *.o

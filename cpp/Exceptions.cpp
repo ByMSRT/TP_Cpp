@@ -1,4 +1,4 @@
-#include "./Exceptions.hpp"
+#include "../hpp/Exceptions.hpp"
 
 const char* EmptyPotion::what() const throw(){
     return "Trying to drink an empty potion!";
