@@ -6,13 +6,14 @@
 
 using namespace std;
 
-class Priest : public Character{
-    private:
 
+class Priest : public Character {
+    private:
+    
 
     public:
-    Priest(string name);
-
+    Priest(string name) : Character(name,Job::PriestJob,15,200,30,1000){}
+    void healOther(Character& other);
 };
 
 #endif
