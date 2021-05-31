@@ -20,6 +20,10 @@ void Character::heal(unsigned int healingValue) {
     }
 }
 
+void Character::shield(unsigned int shieldValue){
+    defense += shieldValue;
+}
+
 void Character::drink(Potion& p){
     this->heal(p.getHealedHp());
 }
@@ -36,6 +40,10 @@ void Character::attack(Character& defender) {
 
 int Character::getCurrentHp(){
     return this->hp;
+}
+
+int Character::getMaxHp(){
+    return this->maxHp;
 }
 
 void Character::receiveDamage(int damage){
