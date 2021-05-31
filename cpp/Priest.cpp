@@ -1,5 +1,10 @@
 #include "../hpp/Priest.hpp"
 
-void Priest::healOther(Character& other){
+bool Priest::healOther(int mp){
+    
+}
+
+
+void Priest::fireball(Character& other){
     
 }

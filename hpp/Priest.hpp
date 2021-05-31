@@ -9,11 +9,13 @@ using namespace std;
 
 class Priest : public Character {
     private:
-    
+    int mp;
+    int magicalAttack;
+    bool healOther(int mp);
 
     public:
-    Priest(string name) : Character(name,Job::PriestJob,15,200,30,1000){}
-    void healOther(Character& other);
+    Priest(string name) : Character(name,Job::PriestJob,20,250,20,1000), mp(100){}
+    void fireball(Character& other);
 };
 
 #endif
