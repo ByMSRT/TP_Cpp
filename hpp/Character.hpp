@@ -13,6 +13,7 @@ enum Job {
     DruidJob,
     PriestJob,
     PaladinJob,
+    MonsterJob,
 };
 
 class Character
@@ -38,6 +39,8 @@ class Character
     Character(string name, Job job, int pAtt, int mAtt, int def, int maxHp);
 
     void heal(unsigned int healingValue);
+
+    void shield(unsigned int shieldValue);
 
     void drink(Potion& p);
 

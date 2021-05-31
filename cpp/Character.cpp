@@ -20,6 +20,10 @@ void Character::heal(unsigned int healingValue) {
     }
 }
 
+void Character::shield(unsigned int shieldValue){
+    defense += shieldValue;
+}
+
 void Character::drink(Potion& p){
     this->heal(p.getHealedHp());
 }
