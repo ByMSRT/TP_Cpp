@@ -47,6 +47,8 @@ class Character
 
     int getCurrentHp();
 
+    int getMaxHp();
+
     public:
     void receiveDamage(int damage);
 };

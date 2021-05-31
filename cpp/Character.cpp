@@ -38,6 +38,10 @@ int Character::getCurrentHp(){
     return this->hp;
 }
 
+int Character::getMaxHp(){
+    return this->maxHp;
+}
+
 void Character::receiveDamage(int damage){
     if(damage < 0) {
         damage = 0;

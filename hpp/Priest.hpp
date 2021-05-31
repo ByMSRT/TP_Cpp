@@ -10,12 +10,12 @@ using namespace std;
 class Priest : public Character {
     private:
     int mp;
-    int magicalAttack;
-    bool healOther(int mp);
+    int maxMp;
+    bool tryUsingMp(int mp);
 
     public:
-    Priest(string name) : Character(name,Job::PriestJob,20,250,20,1000), mp(100){}
-    void fireball(Character& other);
+    Priest(string name) : Character(name,Job::PriestJob,20,250,20,1000), mp(100), maxMp(100){}
+    void healOther(Character& other);
 };
 
 #endif
