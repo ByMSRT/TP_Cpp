@@ -13,6 +13,7 @@ enum Job {
     DruidJob,
     PriestJob,
     PaladinJob,
+    MonsterJob,
 };
 
 class Character
@@ -40,6 +41,8 @@ class Character
 
     void heal(unsigned int healingValue);
 
+    void shield(unsigned int shieldValue);
+
     void drink(Potion& p);
 
     Character& operator+=(Potion& p);
@@ -47,6 +50,8 @@ class Character
     void attack(Character& defender);
 
     int getCurrentHp();
+
+    int getMaxHp();
 
     public:
     void receiveDamage(int damage);

@@ -9,10 +9,12 @@ using namespace std;
 
 class Priest : public Character {
     private:
-    
+    int mp;
+    int maxMp;
+    bool tryUsingMp(int mp);
 
     public:
-    Priest(string name) : Character(name,Job::PriestJob,15,200,30,1000){}
+    Priest(string name) : Character(name,Job::PriestJob,20,250,20,1000), mp(100), maxMp(100){}
     void healOther(Character& other);
 };
 
