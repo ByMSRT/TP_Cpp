@@ -55,6 +55,9 @@ class Character
 
     public:
     void receiveDamage(int damage);
+    virtual void launchSpecialAction(Character& c);
+    virtual string getSpecialActionName();
+
 };
 
 #endif

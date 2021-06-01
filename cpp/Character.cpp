@@ -8,7 +8,7 @@ Character::Character(string name, Job job, int pAtt, int mAtt, int def, int maxH
     this->defense = def;
     this->maxHp = maxHp;
     this->hp = maxHp;
-    quickness = rand() % 41 + 80;
+    this->quickness = rand() % 41 + 80;
 }
 
 
@@ -57,4 +57,8 @@ void Character::receiveDamage(int damage){
     else {
         this->hp -= damage;
     }
+}
+
+string Character::getSpecialActionName() {
+    return "Action spéciale";
 }

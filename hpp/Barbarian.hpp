@@ -16,6 +16,8 @@ class Barbarian : public Character {
     Barbarian(string name);
     void enterFury();
     void leaveFury();
+    void launchSpecialAction(Character& c) override;
+    string getSpecialActionName() override;
 };
 
 

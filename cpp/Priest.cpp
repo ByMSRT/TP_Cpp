@@ -1,5 +1,9 @@
 #include "../hpp/Priest.hpp"
 
+Priest::Priest(string name) : Character(name,Job::PriestJob,20,250,20,1000), mp(100), maxMp(100){
+    this->quickness = rand() % 41 + 70;
+}
+
 bool Priest::tryUsingMp(int mp){
     if(this->mp < mp){
         return false;
@@ -19,4 +23,12 @@ void Priest::healOther(Character& other){
         other.heal(randomHeal);
     }
     
+}
+
+void Priest::launchSpecialAction(Character& c) {
+    this->healOther(c);
+}
+
+string getSpecialActionName() {
+    return "Soin d'allié";
 }
