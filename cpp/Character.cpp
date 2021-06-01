@@ -8,6 +8,7 @@ Character::Character(string name, Job job, int pAtt, int mAtt, int def, int maxH
     this->defense = def;
     this->maxHp = maxHp;
     this->hp = maxHp;
+    quickness = rand() % 41 + 80;
 }
 
 

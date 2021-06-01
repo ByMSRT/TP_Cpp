@@ -4,6 +4,7 @@ Barbarian::Barbarian(string name) : Character(name,Job::BarbarianJob,200,0,15,90
     baseAttack = this->physicalAttack;
     baseDefense = this->defense;
     inFury = false;
+    quickness = rand() % 41 + 60;
 }
 
 void Barbarian::enterFury(){
