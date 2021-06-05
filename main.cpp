@@ -36,11 +36,11 @@ int main(int argc, char const *argv[])
     catch(EmptyPotion& ep){
         cout << "An illegal barbarian fury operation occured : " << ep.what() << endl;
     }
-    catch(std::exception& e){
+    catch(exception& e){
         cout << "An exception occured : " << e.what() << endl;
     }
 
-    cout << "End of combat" << endl;
+    cout << "Fight finished" << endl;
 
     return 0;
 }

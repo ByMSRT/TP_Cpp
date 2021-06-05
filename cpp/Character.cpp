@@ -22,7 +22,7 @@ void Character::heal(unsigned int healingValue) {
 }
 
 void Character::shield(unsigned int shieldValue){
-    defense += shieldValue;
+    this->defense += shieldValue;
 }
 
 void Character::drink(Potion& p){
@@ -58,6 +58,9 @@ void Character::receiveDamage(int damage){
         this->hp -= damage;
     }
 }
+
+void Character::launchSpecialAction() {}
+void Character::launchSpecialAction(Character& c) {}
 
 string Character::getSpecialActionName() {
     return "Action spéciale";

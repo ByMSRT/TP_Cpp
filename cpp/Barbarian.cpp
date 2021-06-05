@@ -22,7 +22,7 @@ void Barbarian::leaveFury(){
     inFury = false;
 }
 
-void Barbarian::launchSpecialAction(Character& c) {
+void Barbarian::launchSpecialAction() {
     if( inFury ){
         this->leaveFury();
     } else {
