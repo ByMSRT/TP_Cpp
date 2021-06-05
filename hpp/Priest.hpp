@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 class Priest : public Character {
     private:
     int mp;
@@ -14,8 +13,10 @@ class Priest : public Character {
     bool tryUsingMp(int mp);
 
     public:
-    Priest(string name) : Character(name,Job::PriestJob,20,250,20,1000), mp(100), maxMp(100){}
+    Priest(string name);
     void healOther(Character& other);
+    void launchSpecialAction(Character& c) override;
+    string getSpecialActionName() override;
 };
 
 #endif
