@@ -1,5 +1,5 @@
-#ifndef PRIEST.HPP
-#define PRIEST.HPP
+#ifndef PRIEST_HPP
+#define PRIEST_HPP
 #include "./Character.hpp"
 #include <string>
 #include "./Exceptions.hpp"
