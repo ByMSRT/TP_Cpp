@@ -29,6 +29,7 @@ class Character
     int defense;
     int maxHp;
     int hp;
+    int quickness;
 
     private:
     Job job;
