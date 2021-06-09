@@ -1,16 +1,13 @@
 #include "../hpp/Barbarian.hpp"
 
 Barbarian::Barbarian(string name) : Character(name,Job::BarbarianJob,200,0,15,900) {
-    baseAttack = this->physicalAttack;
-    baseDefense = this->defense;
-    inFury = false;
-    quickness = rand() % 41 + 60;
+    this->baseAttack = this->physicalAttack;
+    this->baseDefense = this->defense;
+    this->inFury = false;
+    this->quickness = rand() % 41 + 60;
 }
 
 void Barbarian::enterFury(){
-    if( inFury ){
-        throw IllegalFury(true);
-    }
     baseAttack = this->physicalAttack;
     baseDefense = this->defense;
     inFury = true;
@@ -20,10 +17,19 @@ void Barbarian::enterFury(){
 }
 
 void Barbarian::leaveFury(){
-    if(!inFury){
-        throw IllegalFury(false);
-    }
     physicalAttack = baseAttack;
     defense = baseDefense;
     inFury = false;
+}
+
+void Barbarian::launchSpecialAction() {
+    if( inFury ){
+        this->leaveFury();
+    } else {
+        this->enterFury();
+    }
+}
+
+string Barbarian::getSpecialActionName() {
+    return "Furie";
 }

@@ -23,7 +23,6 @@ class Character
     string name;
 
     protected:
-    
     int physicalAttack;
     int magicAttack;
     int defense;
@@ -53,8 +52,11 @@ class Character
 
     int getMaxHp();
 
-    public:
     void receiveDamage(int damage);
+    virtual void launchSpecialAction();
+    virtual void launchSpecialAction(Character& c);
+    virtual string getSpecialActionName();
+
 };
 
 #endif
