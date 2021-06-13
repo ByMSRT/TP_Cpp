@@ -4,7 +4,6 @@
 
 ## Groupe : Nathan, Nicolas, Nathy, Elouan
 
----
 
 # 🔵 Fonctionnement
 
