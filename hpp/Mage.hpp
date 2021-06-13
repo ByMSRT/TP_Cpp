@@ -15,6 +15,8 @@ class Mage : public Character {
     public:
     Mage(string name);
     void fireball(Character& other);
+
+    void playRound(vector<Character*>& characters, int nbrAllies, string actionName) override;
     void launchSpecialAction(Character& c) override;
     string getSpecialActionName() override;
 };

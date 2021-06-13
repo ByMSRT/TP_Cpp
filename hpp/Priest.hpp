@@ -1,5 +1,5 @@
-#ifndef PRIEST.HPP
-#define PRIEST.HPP
+#ifndef PRIEST_HPP
+#define PRIEST_HPP
 #include "./Character.hpp"
 #include <string>
 #include "./Exceptions.hpp"
@@ -15,6 +15,8 @@ class Priest : public Character {
     public:
     Priest(string name);
     void healOther(Character& other);
+
+    void playRound(vector<Character*>& characters, int nbrAllies, string actionName) override;
     void launchSpecialAction(Character& c) override;
     string getSpecialActionName() override;
 };

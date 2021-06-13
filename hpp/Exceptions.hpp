@@ -17,5 +17,10 @@ class IllegalFury : public exception {
     IllegalFury(bool entering) : entering(entering) {}
 };
 
+class UnknownJob : public exception {
+    public:
+    virtual const char* what() const throw();
+};
+
 
 #endif
