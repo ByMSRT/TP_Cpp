@@ -16,7 +16,7 @@ using namespace std;
 
 vector<string> classes = {"Barbarian", "Mage", "Priest", "Monster"};
 vector<string> allyNames {"Elouan", "Nico", "Nathy", "Nathan", "Julien", "Cédric", "Sebiche", "Thib"};
-vector<string> monsterNames {"Sophie", "CriCri", "Quincy", "Royer"};
+vector<string> monsterNames {"Wolf", "Vampire", "Zombie", "Dragon", "Dino", "Ghoul"};
 // vector<string> randomNames; // https://www.fantasynamegenerators.com/ with libcurl lib
 
 // Fonction de création d'un nouveau personnage
