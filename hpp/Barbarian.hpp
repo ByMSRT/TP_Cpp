@@ -11,11 +11,15 @@ class Barbarian : public Character {
     int baseAttack;
     int baseDefense;
     bool inFury;
+    int furyCharges;
 
     public:
     Barbarian(string name);
     void enterFury();
     void leaveFury();
+    void decrementFuryCharges();
+
+    void playRound(vector<Character*>& characters, int nbrAllies, string actionName) override;
     void launchSpecialAction() override;
     string getSpecialActionName() override;
 };
