@@ -1,4 +1,20 @@
 #include "../hpp/Character.hpp"
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+vector<string> jobs {
+    "Freelancer",
+    "Mage",
+    "Warrior",
+    "Barbarian",
+    "Druid",
+    "Priest",
+    "Paladin",
+    "Monster",
+};
 
 Character::Character(string name, Job job, int pAtt, int mAtt, int def, int maxHp){
     this->name = name;
@@ -8,6 +24,7 @@ Character::Character(string name, Job job, int pAtt, int mAtt, int def, int maxH
     this->defense = def;
     this->maxHp = maxHp;
     this->hp = maxHp;
+    this->quickness = rand() % 41 + 80;
 }
 
 
@@ -21,7 +38,7 @@ void Character::heal(unsigned int healingValue) {
 }
 
 void Character::shield(unsigned int shieldValue){
-    defense += shieldValue;
+    this->defense += shieldValue;
 }
 
 void Character::drink(Potion& p){
@@ -36,14 +53,7 @@ Character& Character::operator+=(Potion& p){
 void Character::attack(Character& defender) {
     int damage = this->physicalAttack - defender.defense;
     defender.receiveDamage(damage);
-}
-
-int Character::getCurrentHp(){
-    return this->hp;
-}
-
-int Character::getMaxHp(){
-    return this->maxHp;
+    cout << this->toString() << " attacks " << defender.toString() << endl;
 }
 
 void Character::receiveDamage(int damage){
@@ -56,4 +66,27 @@ void Character::receiveDamage(int damage){
     else {
         this->hp -= damage;
     }
+}
+
+void Character::launchSpecialAction() {}
+void Character::launchSpecialAction(Character& c) {}
+void Character::playRound(vector<Character*>& characters, int nbrAllies) {}
+void Character::playRound(vector<Character*>& characters, int nbrAllies, string actionName) {}
+
+
+int Character::getCurrentHp(){
+    return this->hp;
+}
+int Character::getMaxHp(){
+    return this->maxHp;
+}
+Job Character::getJob() {
+    return this->job;
+}
+string Character::getSpecialActionName() {
+    return "Special action";
+}
+
+string Character::toString() {
+    return this->name + " the " + jobs[this->job]; //+ " (Quickness=" + to_string(this->quickness) + ")";
 }

@@ -2,6 +2,8 @@
 #define CHARACTER_HPP
 #include "./Potion.hpp"
 #include <string>
+#include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -23,18 +25,20 @@ class Character
     string name;
 
     protected:
-    
     int physicalAttack;
     int magicAttack;
     int defense;
     int maxHp;
     int hp;
+    int quickness;
 
     private:
     Job job;
 
     public:
     Character() : Character("John Doe",FreelancerJob,100,100,50,1000){}
+
+    Character(string name, Job job);
 
     Character(string name, Job job, int pAtt, int mAtt, int def, int maxHp);
 
@@ -48,12 +52,24 @@ class Character
 
     void attack(Character& defender);
 
-    int getCurrentHp();
-
-    int getMaxHp();
-
-    public:
     void receiveDamage(int damage);
+
+    virtual void launchSpecialAction();
+    virtual void launchSpecialAction(Character& c);
+    
+    virtual void playRound(vector<Character*>& characters, int nbrAllies);
+    virtual void playRound(vector<Character*>& characters, int nbrAllies, string actionName);
+
+    static bool sortByQuickness(const Character* c1, const Character* c2) {
+        return c1->quickness > c2->quickness;
+    }
+
+    int getCurrentHp();
+    int getMaxHp();
+    Job getJob();
+    virtual string getSpecialActionName();
+
+    string toString();
 };
 
 #endif
