@@ -4,8 +4,11 @@
 
 ## Groupe : Nathan, Nicolas, Nathy, Elouan
 
+# 🔵 Principe du projet 
 
-# 🔵 Fonctionnement
+Le but de ce TP est de faire de notre base de RPG un petit jeu qui permette de dérouler un combat de 3 personnages contre 3 monstres, nous devons rajouter une classe prètre et une classe monstre puis d'ajouter une notion de vitesse de jeu pour déterminer l'ordre des tours. Enfin créer une interface en ligne de commande pour choisir les actions des personnages et consulter leurs status.
+
+## 🟠 Fonctionnement
 
 Nous utilisons le `makefile` qui est un fichier regroupant un ensemble de commandes permettant d'exécuter un ensemble d'actions, comme la compilation d'un projet.
 
