@@ -19,6 +19,8 @@ Le makefile se compose de :
 ## 🟠 Exemple de commande dans le fichier
 
 Voici un exemple de commande situé dans le `makefile` : 
+
+
 `rpg : main.o Character.o Mage.o Barbarian.o Exceptions.o Potion.o
 	g++ main.o Character.o Mage.o Barbarian.o Exceptions.o Potion.o -o rpg --std=c++11`
 
