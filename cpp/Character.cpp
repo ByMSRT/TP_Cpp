@@ -8,6 +8,7 @@ Character::Character(string name, Job job, int pAtt, int mAtt, int def, int maxH
     this->defense = def;
     this->maxHp = maxHp;
     this->hp = maxHp;
+    this->quickness = rand() % 41 + 80;
 }
 
 
@@ -21,7 +22,7 @@ void Character::heal(unsigned int healingValue) {
 }
 
 void Character::shield(unsigned int shieldValue){
-    defense += shieldValue;
+    this->defense += shieldValue;
 }
 
 void Character::drink(Potion& p){
@@ -56,4 +57,11 @@ void Character::receiveDamage(int damage){
     else {
         this->hp -= damage;
     }
+}
+
+void Character::launchSpecialAction() {}
+void Character::launchSpecialAction(Character& c) {}
+
+string Character::getSpecialActionName() {
+    return "Action spéciale";
 }

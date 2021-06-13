@@ -1,11 +1,10 @@
-#ifndef PRIEST.HPP
-#define PRIEST.HPP
+#ifndef PRIEST_HPP
+#define PRIEST_HPP
 #include "./Character.hpp"
 #include <string>
 #include "./Exceptions.hpp"
 
 using namespace std;
-
 
 class Priest : public Character {
     private:
@@ -14,8 +13,10 @@ class Priest : public Character {
     bool tryUsingMp(int mp);
 
     public:
-    Priest(string name) : Character(name,Job::PriestJob,20,250,20,1000), mp(100), maxMp(100){}
+    Priest(string name);
     void healOther(Character& other);
+    void launchSpecialAction(Character& c) override;
+    string getSpecialActionName() override;
 };
 
 #endif
