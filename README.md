@@ -37,6 +37,8 @@ Pour lancer le programme, on utilisera la commande suivante : `./rpg`.
 
 ## 🟠 Axes d'améliorations
 
+- Pas prendre en compte le tableau trié en fonction de la vitesse lors d'un combat avec plsusieurs membres dans une seule équipe.
 
+- Ne pas prendre en compte les personnages qui n'ont plus d'HP
 
 
