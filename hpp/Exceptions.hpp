@@ -2,12 +2,14 @@
 #define EXCEPTIONS_HPP
 #include <exception>
 
-class EmptyPotion : public std::exception {
+using namespace std;
+
+class EmptyPotion : public exception {
     public:
     virtual const char* what() const throw();
 };
 
-class IllegalFury : public std::exception {
+class IllegalFury : public exception {
     bool entering;
     public:
     virtual const char* what() const throw();

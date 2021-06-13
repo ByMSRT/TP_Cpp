@@ -5,6 +5,10 @@ Priest::Priest(string name) : Character(name,Job::PriestJob,20,250,20,1000), mp(
     this->quickness = rand() % 41 + 70;
 }
 
+Priest::Priest(string name) : Character(name,Job::PriestJob,20,250,20,1000), mp(100), maxMp(100){
+    this->quickness = rand() % 41 + 70;
+}
+
 bool Priest::tryUsingMp(int mp){
     if(this->mp < mp){
         return false;
@@ -27,6 +31,7 @@ void Priest::healOther(Character& other){
     
 }
 
+<<<<<<< HEAD
 void Priest::playRound(vector<Character*>& characters, int nbrAllies, string actionName) {
     vector<Character*> allies(characters.begin(), characters.begin() + nbrAllies + 1);
     vector<Character*> monsters(characters.begin() + nbrAllies + 1, characters.end());
@@ -57,10 +62,17 @@ void Priest::playRound(vector<Character*>& characters, int nbrAllies, string act
     }
 }
 
+=======
+>>>>>>> 5c7d2e453a1a2a306edfcf7ebe8639b57798111a
 void Priest::launchSpecialAction(Character& c) {
     this->healOther(c);
 }
 
+<<<<<<< HEAD
 string Priest::getSpecialActionName() {
     return "Heal ally";
+=======
+string getSpecialActionName() {
+    return "Soin d'allié";
+>>>>>>> 5c7d2e453a1a2a306edfcf7ebe8639b57798111a
 }
